@@ -30,9 +30,12 @@ function getDice(){
     console.log(" getdice körs");
     return $('.radioKnapp:checked').val();
     
+    
+    var summa = 0;
     for( var i = 0; i < numberDice; i++){
         var x = Math.floor((Math.random() * 6) + 1);
         summa += x;
+        $('<p>').text(summa).appendTo(".ruta");
         
         
     }
